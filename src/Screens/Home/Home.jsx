@@ -4,20 +4,12 @@ import { CategoryItem } from "./components";
 import { Header } from "../../components";
 import data from "../../data/data";
 import styles from "./Home.style";
-import {
-  useFonts,
-  Inter_900Black,
-  Inter_300Light,
-} from "@expo-google-fonts/inter";
-
 
 const Home = () => {
-  let [fontsLoaded] = useFonts({ Inter_900Black, Inter_300Light });
+
   const [isEnabled, setIsEnabled] = useState(false);
 
-  if (!fontsLoaded) {
-    return null;
-  }
+ 
   const toggleSwitch = () => {
     setIsEnabled((previousState) => !previousState);
   };
